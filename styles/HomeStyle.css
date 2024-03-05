@@ -84,7 +84,7 @@
 
 #Home .left-side {
     min-width: 500px; /* Adjust maximum width for better responsiveness */
-    margin-right: 7%; 
+    margin-right: 6%; 
 }
 
 #Home .right-side {
@@ -104,7 +104,7 @@
   }
   
 .left-side  h2 {
-    font-size: 70px;
+    font-size: 60px;
   }
   
 .left-side p {
@@ -436,5 +436,22 @@
         border-radius: 15px;
         overflow: hidden;
         margin: auto;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .left-side {
+        margin: 0px 10px;
+    }
+
+    .left-side .name{
+        font-size: 30px;
+        text-align: right;
+    }
+
+
+    .left-side h2{
+        font-size: 20px;
     }
 }

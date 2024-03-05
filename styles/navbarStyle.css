@@ -114,6 +114,7 @@
     font-size: 20px;
     font-family:'Courier New', Courier, monospace;
     font-weight: 700;
+    width: 100vw;
     z-index: 30;
 }
 
@@ -302,10 +303,10 @@ input:checked + .toggle-button::before{
     .mobile-menu.show {
         display: flex;
         flex-direction: column;
-        position: fixed;
+        position: sticky;
         top: 64px; 
         right: 0;
-        width: 100%;
+        width: 100vw;
         z-index: 5;
 
     }
