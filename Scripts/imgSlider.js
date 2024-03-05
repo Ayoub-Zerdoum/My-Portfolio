@@ -198,40 +198,40 @@ function initializeSlider2(imageArray, sliderContainer) {
 
 
 let projectStadeImages = [
-    "../images/project captures/Projet Stade/login.png",
-    "../images/project captures/Projet Stade/EventViewer1.png",
-    "../images/project captures/Projet Stade/StadeViewer1.png",
-    "../images/project captures/Projet Stade/EventViewer2.png",
-    "../images/project captures/Projet Stade/TicketViewer.png",
-    "../images/project captures/Projet Stade/EventManager1.png",
-    "../images/project captures/Projet Stade/EventManager2.png",
-    "../images/project captures/Projet Stade/EventManager3.png",
-    "../images/project captures/Projet Stade/StadeBuilder1.png"
+    "./images/project captures/Projet Stade/login.png",
+    "./images/project captures/Projet Stade/EventViewer1.png",
+    "./images/project captures/Projet Stade/StadeViewer1.png",
+    "./images/project captures/Projet Stade/EventViewer2.png",
+    "./images/project captures/Projet Stade/TicketViewer.png",
+    "./images/project captures/Projet Stade/EventManager1.png",
+    "./images/project captures/Projet Stade/EventManager2.png",
+    "./images/project captures/Projet Stade/EventManager3.png",
+    "./images/project captures/Projet Stade/StadeBuilder1.png"
 ];
 
 let projectDashboardImages = [
-    "../images/project captures/dashboard atlas auto/capture_Dashboard.png"
+    "./images/project captures/dashboard atlas auto/capture_Dashboard.png"
 ];
 
 let projectMangaAnimeImages = [
-    "../images/project captures/mangan anime website/home1.png",
-    "../images/project captures/mangan anime website/home2.png",
-    "../images/project captures/mangan anime website/home3.png",
-    "../images/project captures/mangan anime website/lightnovel.png",
-    "../images/project captures/mangan anime website/manga.png",
-    "../images/project captures/mangan anime website/manga.png",
-    "../images/project captures/mangan anime website/mangaPage2.png",
-    "../images/project captures/mangan anime website/animePage1.png"
+    "./images/project captures/mangan anime website/home1.png",
+    "./images/project captures/mangan anime website/home2.png",
+    "./images/project captures/mangan anime website/home3.png",
+    "./images/project captures/mangan anime website/lightnovel.png",
+    "./images/project captures/mangan anime website/manga.png",
+    "./images/project captures/mangan anime website/manga.png",
+    "./images/project captures/mangan anime website/mangaPage2.png",
+    "./images/project captures/mangan anime website/animePage1.png"
 ];
 
 let projectGestionGarageImages = [
-    "../images/project captures/projet gestionGarage/menu1.png",
-    "../images/project captures/projet gestionGarage/menuClient1.png",
-    "../images/project captures/projet gestionGarage/menuEmployee1.png",
-    "../images/project captures/projet gestionGarage/menuPieces0.png",
-    "../images/project captures/projet gestionGarage/menuVoiture0.png",
-    "../images/project captures/projet gestionGarage/menuReparation0.png",
-    "../images/project captures/projet gestionGarage/menuFacture0.png"
+    "./images/project captures/projet gestionGarage/menu1.png",
+    "./images/project captures/projet gestionGarage/menuClient1.png",
+    "./images/project captures/projet gestionGarage/menuEmployee1.png",
+    "./images/project captures/projet gestionGarage/menuPieces0.png",
+    "./images/project captures/projet gestionGarage/menuVoiture0.png",
+    "./images/project captures/projet gestionGarage/menuReparation0.png",
+    "./images/project captures/projet gestionGarage/menuFacture0.png"
 ];
 
 
