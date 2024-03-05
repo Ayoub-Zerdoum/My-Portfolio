@@ -1,0 +1,440 @@
+@import url('variables.css');
+
+.Home_Container{
+    position: relative;
+    padding: 30px 0px 100px 0px;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--main-color) 0% 100%, white 100%);
+
+    /* Add a circular area with box shadows */
+  &:before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    left: var(--spotlight-position-x, 50%);
+    top: var(--spotlight-position-y, 50%);
+    z-index: 0;
+    box-shadow: 0 0 70px 150px rgba(255, 255, 255, 0.5); /* Customize the box shadow */
+    pointer-events: none; /* Allow clicks to go through the circular area to the content */
+  }
+}
+#Home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 0px 7%;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+
+.hexagon-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to go through the grid to the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+.hexagon-row {
+    display: flex;
+}
+
+.hexagon-row:nth-child(odd) .hexagon:first-child{
+    margin-left: 105px !important;
+}
+
+
+
+  
+.hexagon {
+    width: 100px;
+    height: 58px;
+    background-color: var(--main-color); /* Adjust color as needed */
+    position: relative;
+    margin: 16px 2px; /* Adjust spacing between hexagons */
+}
+
+.hexagon::before,
+.hexagon::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+  
+.hexagon::before {
+    top: -29px;
+    border-bottom: 29px solid var(--main-color); /* Match the hexagon background color */
+}
+  
+  .hexagon::after {
+    bottom: -29px;
+    border-top: 29px solid var(--main-color); /* Match the hexagon background color */
+  }
+
+#Home .left-side {
+    min-width: 500px; /* Adjust maximum width for better responsiveness */
+    margin-right: 7%; 
+}
+
+#Home .right-side {
+    min-width: 200px;
+    width: 300px; /* Adjust maximum width for better responsiveness */
+}
+
+#Home .left-side {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+.left-side  .welcomeName {
+    display: flex;
+    flex-direction: row;
+    color: white; /* White text for dark backgrounds */
+    font-size: 1.5em;
+  }
+  
+.left-side  h2 {
+    font-size: 70px;
+  }
+  
+.left-side p {
+    color: #ccc; /* Light gray text for dark backgrounds */
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 850px;
+    text-indent: 10px;
+  }
+  
+  /* Additional styling for spans with specific classes */
+  .welcome {
+    color: white; /* Gold color */
+    white-space: nowrap;
+  }
+  
+  .name {
+    color: gold; /* Cyan color */
+    font-family: Condiment;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    font-size: 30px;
+    margin-left: 10px;
+    width: 100%;
+  }
+
+.left-side h2 span:first-child{
+    color: var(--main-color);
+    -webkit-text-stroke: 0.1vw white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.left-side h2 span:first-child::before{
+    content: attr(data-text);
+    position: absolute;
+    top: -2px;
+    left: 0;
+    color: gold;
+    width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.1vw gold;
+    border-right: 2px solid gold;
+    overflow: hidden;
+    animation: textAnimation 6s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes textAnimation{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+
+/*photo & border animation*/
+.photo {
+    max-width: 100%; /* Adjust maximum width for responsiveness */
+    height: auto;
+    padding: 6px;
+    animation: rotateBorder 10s linear infinite;
+    overflow: hidden;
+    position: relative;
+    border-radius: 13px;
+    z-index: 0;
+    box-shadow: 0 0 20px white;
+
+    &::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(var(--main-color), var(--main-color)), linear-gradient(white, white), linear-gradient(var(--main-color), var(--main-color)), linear-gradient(white, white);
+		animation: rotate 4s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: black;
+		border-radius: 10px;
+	}
+
+}
+
+.photo_border{
+    max-width: 100%; /* Adjust maximum width for responsiveness */
+    height: auto;
+    animation: rotateBorder 10s linear infinite;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    z-index: 0;
+    &::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(white, white), linear-gradient(var(--main-color), var(--main-color)), linear-gradient(white, white),linear-gradient(var(--main-color), var(--main-color));
+		animation: rotate 4s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 10px;
+	}
+}
+
+
+
+.photo img {
+    /*width: calc(100% - 6px);*/
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid transparent;
+    border-radius: 10px;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+
+
+
+
+
+/*this effect is cool ut ot what i expected hhhh*/
+/*
+@keyframes rotateBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.photo::before,
+.photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ffd700 0%, #ffd700 50%, transparent 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: rotateBorder 10s linear infinite;
+}
+
+.photo::after {
+    transform: scaleX(-1);
+}
+*/
+/*end*/
+
+.cv_button{
+    font-family: 'Poppins';
+    margin: 40px auto;
+    width: fit-content;
+}
+
+.cv_button a{
+    position: relative;
+    width: 210px;
+    height: 60px;
+    display: inline-block;
+    background: #fff;
+}
+
+.cv_button a::before,
+.cv_button a::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #f00;
+    transition: .5s;
+    background: linear-gradient(45deg,#ea2027,#0e1538,#1aff22);
+}
+
+.cv_button a:hover::before{
+    inset: -3px;
+}
+
+.cv_button a:hover::after{
+    inset: -3px;
+    filter: blur(10px);
+}
+
+.cv_button a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: #0e1535;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid #040a29;
+    overflow: hidden;
+}
+
+.cv_button a span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.075);
+    transform: skew(25deg);
+}
+
+@media (max-width: 900px) {
+    #Home {
+        padding: 30px 5%;
+    }
+
+    #Home .left-side{
+        margin-right: 20px;
+    }
+
+    #Home {
+        flex-direction: column; /* Change to column layout on smaller screens */
+        align-items: center; /* Center content vertically */
+    }
+
+    .left-side  .welcomeName {
+        flex-direction: column;
+      }
+    .left-side .name{
+        text-align: right;
+        color: gold; /* Cyan color */
+        font-family: Condiment;
+        letter-spacing: 5px;
+        white-space: nowrap;
+        font-size: 20x;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .left-side h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1700px) {
+
+    .left-side h2{
+        font-size: 60px;
+    }
+}
+
+
+@media (max-width: 1550px) {
+    
+    .left-side .name{
+        font-size: 40px;
+        text-align: right;
+    }
+
+    .left-side .welcomeName{
+        flex-direction: column;
+    }
+
+    .left-side h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #Home {
+        flex-direction: column; /* Change to column layout on smaller screens */
+        align-items: center; /* Center content vertically */
+    }
+
+    #Home .right-side {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-top: 20px; /* Add margin below text on smaller screens */
+    }
+
+    .photo {
+        max-width: 80%; /* Adjust maximum width for responsiveness */
+        height: auto;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: auto;
+    }
+}

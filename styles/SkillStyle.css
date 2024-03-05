@@ -1,0 +1,121 @@
+
+
+.skill_section .section_title{
+    margin-bottom: 30px;
+}
+
+.skill-main-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.skill-main-container .skill-container{
+    border-radius: 10px;
+    padding: 20px 5px 10px 5px;
+    box-shadow: 0px 0px 5px var(--main-color);
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+    scale: 1;
+    transition: scale 0.3s ease;
+}
+
+.skill-main-container .skill-container:hover{
+    box-shadow: 0px 0px 7px var(--main-color);
+    scale: 1.03;
+    transition: scale 0.3s ease;
+}
+
+.skill-container h1{
+    font-size: 40px;
+    font-family: "Kode Mono", monospace;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    /*margin-bottom: 20px;*/
+}
+
+.skill-container .icons-container{
+    display: flex;
+    margin: 0px 20px 10px 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+}
+
+.icons-container .icon{
+    position: relative;
+    margin: 20px 10px;
+}
+
+.icons-container .icon i{
+    font-size: 80px;
+}
+
+.icons-container .icon img{
+    width: 80px;
+}
+
+.icons-container .icon.plus0 img{
+    width: 120px;
+}
+
+.icons-container .icon.plus1 img{
+    width: 100px;
+}
+
+.icons-container .icon.plus2 img{
+    width: 160px;
+}
+
+.icons-container .icon .rating{
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding: 5px;
+    font-size: small;
+    font-family: "Kode Mono", monospace;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0px 3px;
+    backdrop-filter: blur(10px);
+}
+
+.icons-container .icon.plus0 .rating{
+    bottom: -42px;
+}
+
+.icons-container .icon.plus1 .rating{
+    bottom: 0px;
+}
+
+.icons-container .icon.plus2 .rating{
+    bottom: -32px;
+}
+
+.icons-container .icon .rating.advanced{
+    color: red;
+    border: 2px solid red;
+    background: rgba(255, 0, 0, 0.2);
+}
+
+/* Intermediate Rating */
+.icons-container .icon .rating.intermediate {
+    color: #4CAF50; /* Green color for intermediate */
+    border: 2px solid #4CAF50;
+    background: rgba(76, 175, 80, 0.2); /* Light green background */
+}
+
+/* Beginner Rating */
+.icons-container .icon .rating.beginner {
+    color: #2196F3; /* Blue color for beginner */
+    border: 2px solid #2196F3;
+    background: rgba(33, 150, 243, 0.2); /* Light blue background */
+}
+

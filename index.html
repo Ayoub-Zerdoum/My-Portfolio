@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoub-Zerdoum</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <link rel="stylesheet" href="./styles/navbarStyle.css">
+    <link rel="stylesheet" href="./styles/generalStyle.css">
+    <link rel="stylesheet" href="./styles/HomeStyle.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/AboutStyle.css">
+    <link rel="stylesheet" href="./styles/SkillStyle.css">
+    <link rel="stylesheet" href="./styles/projectStyles.css">
+    <link rel="stylesheet" href="./styles/imgSliderStyle.css">
+    <link rel="stylesheet" href="./styles/ContactStyle.css">
+</head>
+<body>
+    <nav id="stickyNav" class="light-navbar">
+        <div class="left_side">
+            <div class="logo">
+                <div class="circle">
+                    <div class="moon"></div>
+                </div>
+                <div class="letter">Zerdoum</div>
+            </div>
+        </div>
+        <div class="right_side">
+            <a href="#Home" class="choice" lang="en">Home</a>
+            <a href="#About" class="choice" lang="en">About</a>
+            <a href="#Projects" class="choice" lang="en">Projects</a>
+            <a href="#Contact" class="choice" lang="en">Contact</a>
+            <a href="#Home" class="choice" lang="fr">Accueil</a>
+            <a href="#About" class="choice" lang="fr">À propos</a>
+            <a href="#Projects"class="choice" lang="fr">Projets</a>
+            <a href="#Contact" class="choice" lang="fr">Contact</a>
+        </div>
+        
+        
+        <div class="param">
+            <div class="colors" id="settings-icon"><i class="fas fa-cog"></i></div>
+            <div class="hamburger-icon"><i class="fas fa-bars"></i></div>
+        </div>
+        
+    </nav>
+    <!-- Mobile menu container -->
+    <div class="mobile-menu light-navbar">
+        <a href="#Home" class="choice" lang="en">Home</a>
+        <a href="#About" class="choice" lang="en">About</a>
+        <a href="#Projects" class="choice" lang="en">Projects</a>
+        <a href="#Contact" class="choice" lang="en">Contact</a>
+        <a href="#Home" class="choice" lang="fr">Accueil</a>
+        <a href="#About" class="choice" lang="fr">À propos</a>
+        <a href="#Projects"class="choice" lang="fr">Projets</a>
+        <a href="#Contact" class="choice" lang="fr">Contact</a>
+    </div>
+
+    <!-- Color choice menu -->
+    <div class="options" id="options">
+        <div class="color-options" id="color-options">
+            <p lang="fr" class="color_option_text">Couleur du thème</p>
+            <p lang="en" class="color_option_text">Theme color</p>
+            <div class="color-picker">
+                <div class="color-option" data-color="#3c2c99"></div>
+                <div class="color-option" data-color="#000080"></div>
+
+
+                
+                <div class="color-option" data-color="#1854b4"></div>
+                <div class="color-option" data-color="#008000"></div>
+                
+                <div class="color-option" data-color="#B22222"></div>
+            </div>
+        </div>
+        <div class="lang-options">
+            <p class="lang_option_text">Language</p>
+            <div id="language-switcher" class="toggle-switch">
+                <label class="text">eng</label>
+                <input type="checkbox" id="language-toggle" onchange="toggleLanguage()">
+                <label for="language-toggle" class="toggle-button"></label>
+                <label class="text">fr</label>
+            </div>
+        </div>
+    </div>
+    
+
+    <main>
+        <div id="Home" class="Home_Container">
+            <div id="hexagonGrid"class="hexagon-grid">
+
+              </div>
+            <section id="Home" itemscope itemtype="http://schema.org/Person" class="home-section">
+                <div class="left-side" lang="en">
+                    <!-- English Content -->
+                    <div class="welcomeName"><div class="welcome">Welcome to My Portfolio </div><div class="name"  itemprop="name">Ayoub Zerdoum </div></div>
+                    <h2><span data-text="FULL Stack Developper">FULL Stack Developper</span></h2>
+                    <p itemprop="description">
+                        Hello! I'm a dedicated student with a passion for Web Developpement.
+                    </p>
+                    <p>Feel free to explore my portfolio to see some of my academic & personal projects and learn more about my journey.</p>
+                    <div class="cv_button">
+                        <a href="#"><span>Download CV</span></a>
+                    </div>
+                </div>
+                <div class="left-side" lang="fr" style="display: none;">
+                    <!-- French Content -->
+                    <div class="welcomeName">
+                        <div class="welcome">Bienvenue sur mon portfolio </div>
+                        <div class="name" itemprop="name">Ayoub Zerdoum </div>
+                    </div>
+                    <h2><span data-text="Développeur Full Stack">Développeur Full Stack</span></h2>
+                    <p itemprop="description">
+                        Salut ! Je suis un étudiant dévoué avec une passion pour le développement web.
+                    </p>
+                    <p>N'hésitez pas à explorer mon portfolio pour découvrir certains de mes projets académiques et personnels et en savoir plus sur mon parcours.
+                    </p>
+                    <div class="cv_button">
+                        <a href="#"><span>Télécharger CV</span></a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="photo">
+                        <div class="photo_border" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                            <img src="./images/Ayoub IMG.jpg" alt="Your Photo" itemprop="contentUrl">
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </div>
+        <section id="About" class="about-section section">
+                <h1 class="title" lang="en">About</h1>
+                <h1 class="title" lang="fr">A Propos</h1>
+                <p class="desc" lang="en">get to know me and my skills</p>
+                <p class="desc" lang="fr">Apprenez à me connaître et à découvrir mes compétences</p>
+                <div class="about_container">
+                    <div class="box pers_info_section">
+                        <h2 class="section_title">
+                            <p lang="en">Personal Information</p>
+                            <p lang="fr">Informations Personnelles</p>
+                            <hr class="title_line">
+                        </h2>
+                        <ul class="pers_info_list">
+                            <li lang="en"><span class="info-label">Name:</span> Ayoub Zerdoum</li>
+                            <li lang="en"><span class="info-label">Age:</span> 22</li>
+                            <li lang="en"><span class="info-label">Date of Birth:</span> May 18, 2001</li>
+                            <li lang="en"><span class="info-label">Place of Birth:</span> Nabeul, Beni Khiar</li>
+                            <li lang="en"><span class="info-label">Current Residence:</span> Ariana, Borj Louzir</li>
+                            <li lang="en"><span class="info-label">Nationality:</span> Tunisian</li>
+                            <li lang="en"><span class="info-label">Status:</span> Student</li>
+
+                            <li lang="fr"><span class="info-label">Nom :</span> Ayoub Zerdoum</li>
+                            <li lang="fr"><span class="info-label">Âge :</span> 22</li>
+                            <li lang="fr"><span class="info-label">Date de Naissance :</span> 18 mai 2001</li>
+                            <li lang="fr"><span class="info-label">Lieu de Naissance :</span> Nabeul, Beni Khiar</li>
+                            <li lang="fr"><span class="info-label">Adresse Actuelle :</span> Ariana, Borj Louzir</li>
+                            <li lang="fr"><span class="info-label">Nationalité :</span> Tunisienne</li>
+                            <li lang="fr"><span class="info-label">Statut :</span> Étudiant</li>
+                        </ul>
+
+                    </div>
+                    <div class="box career_edu_section">
+                        <div class="title_box">
+                            <div class="edu active section_title_container" onclick="toggleSection('edu')">
+                                <h2 class="section_title edu_title" lang="en">Education</h2>
+                                <h2 class="section_title edu_title" lang="fr">Éducation</h2>
+                            </div>
+                            <div class="career section_title_container" onclick="toggleSection('career')">
+                                <h2 class="section_title career_title" lang="en">Career</h2>
+                                <h2 class="section_title career_title" lang="fr">Carrière</h2>
+                            </div>
+                        </div>
+                        <div class="edu_career_container">
+                            <div class="list-container">
+                                <ul class="edu-list list">
+                                    <li data-id="edu-entry-1" class="active">LPN</li>
+                                    <li data-id="edu-entry-2">IPEIN</li>
+                                    <li data-id="edu-entry-3">ENICAR</li>
+                                </ul>
+                                <ul class="career-list list" style="display: none;">
+                                    <li data-id="career-entry-1">ATLAS AUTO <span lang="fr">(Stage)</span><span lang="en">(Internship)</span></li>
+                                </ul>
+                            </div>
+                            <div class="info-container">
+                                <div class="edu-info active" id="edu-entry-1">
+                                    <!-- Information for Education Entry 1 -->
+                                    <h3 lang="fr"><span>LPN</span> - Lycee Pilote de Nabeul</h3>
+                                    <h3 lang="en"><span>LPN</span> - The Pioneer School of Nabeul</h3>
+                                    <h5 class="date">2016 - 2020</h5>
+
+                                    <ul class="info-list">
+                                        <li lang="fr">Etudes au niveau secondaire au Lycée Pilote de Nabeul</li>
+                                        <li lang="en">Secondary education at The Pioneer School of Nabeul</li>
+                                    </ul>
+                                    <p lang="fr">baccalauréat technique session 2019/2020</p>
+                                    <p lang="fr">Mentien : tres bien </p>
+                                    <p lang="en">Technical baccalaureate session 2019/2020</p>
+                                    <p lang="en">Mention: Very Good</p>
+                                </div>
+                                <div class="edu-info" id="edu-entry-2">
+                                    <!-- Informations pour la deuxième entrée éducative -->
+                                    <h3 lang="fr"><span>IPEIN</span> - Institut préparatoire aux études d'ingénieurs de Nabeul</h3>
+                                    <h3 lang="en"><span>IPEIN</span> - Preparatory Institute for Engineering Nabeul</h3>
+                                    <h5 class="date">2020 - 2022</h5>
+                                    <ul class="info-list">
+                                        <li lang="fr">Études en cycles preparatoire à l'IPEIN, Filière Techno (T)</li>
+                                        <li lang="fr">Réussite au Concours Nationaux d'Entrée aux Cycles de Formation d'Ingénieurs</li>
+                                        <li>Studies in the preparatory cycles at IPEIN, Techno Track (T)</li>
+                                        <li>Success in the National Entrance Exams for Engineering Training Cycles</li>
+                                        <h4>Clubs :</h4>
+                                        <li lang="fr">Participation au club Robo-IPEIN, un regroupement d'étudiants passionnés par la robotique à l'IPEIN, en tant que membre du département RH (Ressources Humaines).</li>
+                                        <li lang="en">Participation in the Robo-IPEIN club, a gathering of students passionate about robotics at IPEIN, as a member of the HR (Human Resources) department.</li>
+                                    </ul>
+                                    <p lang="fr">Concours techno session 2021/2022</p>
+                                    <p lang="fr">Rang : <span>53</span>/2152</p>
+                                    <p lang="en">Engineering entrance exams, session 2021/2022</p>
+                                    <p lang="en">Rank: <span>53</span>/2152</p>
+                                </div>
+                                <div class="edu-info" id="edu-entry-3">
+                                    <!-- Informations pour la deuxième entrée éducative -->
+                                    <h3 lang="fr"><span>ENICAR</span> - École Nationale d'Ingénieurs de Carthage</h3>
+                                    <h3 lang="en"><span>ENICAR</span> - National Engineering School of Carthage</h3>
+                                    <h5 class="date" lang="fr">2022 - présent</h5>
+                                    <h5 class="date" lang="en">2022 - Present</h5>
+                                    <ul class="info-list">
+                                        <li lang="fr">Études d'ingénierie Genie Informatique</li>
+                                        <li lang="en">Computer Engineering studies</li>
+                                        <h4>Clubs :</h4>
+                                        <li lang="fr">Participation au club GDCS - Google Developer Student Clubs ENICarthage -,un groupe communautaire basé à l'université pour les étudiants intéressés par les technologies de développement Google.</li>
+                                        <li lang="en">Participation in the GDCS club - Google Developer Student Clubs ENICarthage -, a community group based at the university for students interested in Google developer technologies.</li>
+                                    </ul>
+                                    <p lang="fr">diplome ingénierie en informatique ?</p>
+                                    <p lang="fr">EN COURS ...</p>
+                                    <p lang="en">Computer Engineering degree?</p>
+                                    <p lang="en">IN PROGRESS ...</p>
+                                </div>
+                                <div class="career-info" id="career-entry-1">
+                                    <!-- Informations pour la deuxième entrée éducative -->
+                                    <h3><span>ATLAS auto</span></h3>
+                                    <h5 class="date" lang="fr">jullet 2023</h5>
+                                    <h5 class="date" lang="en">July 2023</h5>
+                                    <ul class="info-list">
+                                        <li lang="fr">Stage d'initiation pour 1ere année genie informatique</li>
+                                        <li lang="en">Internship for the first year of computer engineering</li>
+                                        <h4>MISSION :</h4>
+                                        <li lang="fr">developpement d'un tableau de board pour statistiques sur les entretien des automobiles.</li>
+                                        <li lang="en">Development of a dashboard for statistics on automobile maintenance.</li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="career-info" id="career-entry-2">
+                                    <!-- Informations pour la deuxième entrée éducative -->
+                                    <h3><span>anonyme</span></h3>
+                                    <h5 class="date">jullet 2024</h5>
+                                    <ul class="info-list">
+                                        <li>Stage d'initiation pour 1ere année genie informatique</li>
+                                        <h4>MISSION :</h4>
+                                        <li>developpement d'un tableau de board pour statistiques sur les entretien des automobiles.</li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box skill_section">
+                        <h2 class="section_title">
+                            <span lang="en">Skills</span>
+                            <span lang="fr">Compétences</span>
+                            <hr class="title_line">
+                        </h2>
+                        <div class="skill-main-container">
+                            <div class="skill-container">
+                                <h1 lang="en">Programming Languages</h1>
+                                <h1 lang="fr">Langages de Programmation</h1>
+                                <div class="icons-container">
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="javascript"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="python"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt="java"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="typescript"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="c"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="c++"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <h1>Front-end</h1>
+                                <div class="icons-container">
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="html5"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="css3"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="angular"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" alt="react"/>
+                                        <div class="rating beginner"><span lang="en">Beginner</span><span lang="fr">Débutant </span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" />
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <h1>back-end</h1>
+                                <div class="icons-container">
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="node js"/>
+                                        <div class="rating beginner"><span lang="en">Beginner</span><span lang="fr">Débutant </span></div>
+                                    </div>
+                                    <div class="icon plus0">
+                                        <img src="./images/dev icons/pngaaa.com-2459546.png" alt="spring boot"/>
+                                        <div class="rating beginner"><span lang="en">Beginner</span><span lang="fr">Débutant </span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <h1 lang="en">Database Management</h1>
+                                <h1 lang="fr">Gestion de Base de Données</h1>
+                                <div class="icons-container">
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="mysql"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" alt="oracle database"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql"/>
+                                        <div class="rating beginner"><span lang="en">Beginner</span><span lang="fr">Débutant </span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <h1 lang="en">Desktop Application</h1>
+                                <h1 lang="fr">Applications Bureau</h1>
+                                <div class="icons-container">
+                                    <div class="icon plus2">
+                                        <img src="./images/dev icons/440px-JavaFX_Logo.png" alt="java fx"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <h1 lang="en">Data Analysis</h1>
+                                <h1 lang="fr">Analyse de Données</h1>
+                                <div class="icons-container">
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" alt="pandas"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original-wordmark.svg" alt="numpy"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/plotly/plotly-original-wordmark.svg" alt="plotly"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="./images/dev icons/python_dash.png" alt="Python_dash">
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <h1 lang="en">Version Control</h1>
+                                <h1 lang="fr">Contrôle de Version</h1>
+                                <div class="icons-container">
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" alt="git"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="github"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-container">
+                                <h1 lang="en">Tools</h1>
+                                <h1 lang="fr">Outils</h1>
+                                <div class="icons-container">
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" alt="vscode"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" alt="pycharm"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="./images/dev icons/icons8-apache-netbeans-240.png" alt="apache netbeans"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <div class="icon plus1">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original-wordmark.svg" alt="eclipse"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    <div class="icon plus2">
+                                        <img src="./images/dev icons/spring-tool.svg" alt="spring tools suite 4"/>
+                                        <div class="rating advanced"><span lang="en">Advanced</span><span lang="fr">Avancé</span></div>
+                                    </div>
+                                    <!--
+                                    <div class="icon plus1">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codepen/codepen-original-wordmark.svg" alt="codepen"/>
+                                        <div class="rating intermediate"><span lang="en">Intermediate</span><span lang="fr">Intermédiaire</span></div>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="Projects" class="projet-section section">
+            <h1 class="title" lang="en">Projects</h1>
+            <h1 class="title" lang="fr">Projets</h1>
+            <p class="desc" lang="en">Check some of my projects</p>
+            <p class="desc" lang="fr">Apprenez à me connaître et à découvrir mes compétences</p>
+            <div class="project-container">
+                <div class="tri-button" onclick="toggleTriSection()">
+                    <span lang="en">Sort</span>
+                    <span lang="fr">Trier</span>
+                </div>
+                <div class="arrow" onclick="deactivateTriSection()"></div>
+                <div class="tri-section">
+                    <div class="tri-domaine">
+                        <h3 class="tri-title" lang="en">Sort by domaine</h3>
+                        <h3 class="tri-title" lang="fr">Trier par domaine</h3>
+                        <div class="tri-container" id="tri-domaine-container">
+                            <div class="tri-item active" data-domaine="ALL">
+                                <span lang="en">ALL</span>
+                                <span lang="fr">TOUS</span>
+                            </div>
+                            <div class="tri-item" data-domaine="Web">Web</div>
+                            <div class="tri-item" data-domaine="Mobile">Mobile</div>
+                            <div class="tri-item" data-domaine="Desktop">Desktop</div>
+                        </div>
+                    </div>
+                    <div class="tri-tech">
+                        <h3 class="tri-title" lang="en">Sort by tech</h3>
+                        <h3 class="tri-title" lang="fr">Trier par tech</h3>
+                        <div class="tri-container" id="tri-tech-container">
+                            <div class="tri-item active" data-tech="ALL">
+                                <span lang="en">ALL</span>
+                                <span lang="fr">TOUS</span>
+                            </div>
+                            <div class="tri-item" data-tech="html">html</div>
+                            <div class="tri-item" data-tech="css">css</div>
+                            <div class="tri-item" data-tech="javascript">javascript</div>
+                            <div class="tri-item" data-tech="java">java</div>
+                            <div class="tri-item" data-tech="python">python</div>
+                            <div class="tri-item" data-tech="c">c</div>
+                            <div class="tri-item" data-tech="c++">c++</div>
+                            <div class="tri-item" data-tech="bootstrap">bootstrap</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-list">
+                    <div class="card-container back"  id="projetStade">
+                        <div class="project-item">
+                            <div class="front-display">
+                                <div class="img_slider">
+                                    <div class="btn backward"><i class="fas fa-angle-double-left"></i></div>
+                                    <div class="btn forward"><i class="fas fa-angle-double-right"></i></div>
+                                    <div class="img_container"></div>
+                                    
+                                </div>
+                                <div class="prj-info">
+                                    <div class="container-main">
+                                        <h1 class="prj-title" lang="en">Ticket Sales Application for a Stadium Concert</h1>
+                                        <h1 class="prj-title" lang="fr">Application de Vente de Tickets pour un Concert au Stade</h1>
+                                        <div class="prj-type">
+                                            <div class="tri-item">Desktop</div>
+                                        </div>
+                                        <p class="prj-desc" lang="en">A desktop application that allows selling tickets for a stadium concert.</p>
+                                        <p class="prj-desc" lang="fr">Une application desktop qui permet de vendre de tickets pour un concert au stade.</p>
+                                    </div>
+                                    <div class="container-extra">
+                                        <div class="prj-links">
+                                            <a href="https://github.com/Ayoub-Zerdoum/ProjetStade" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" /></a>
+                                        </div>
+                                        
+                                        <div class="plus">
+                                            <span lang="en">See More</span>
+                                            <span lang="fr">Voir Plus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-display">
+                                <div class="icon-box">
+                                    <div class="return-icon">
+                                        <img src="./images/arrow-81-128.png" alt="arrow Back">
+                                    </div>
+                                </div>
+                                <div class="back-container">
+                                    <h1 class="prj-title">Application de Vente de Tickets pour un
+                                        Concert au Stade</h1>
+                                    <div class="prj-type">
+                                        <div class="tri-item">java</div>
+                                        <div class="tri-item">javafx</div>
+                                        <div class="tri-item">mysql</div>
+                                    </div>
+                                    <div class="desc-container">
+                                        <p class="prj-desc">The application should allow users to :
+                                        </p>
+                                        <ul class="info-list">
+                                            <li>Browse upcoming events and select the one they want to attend.</li>
+                                            <li>Top view of the stadium layout to help them make informed seat choices.</li>
+                                            <li>Select specific seats based on their preferences or requirements.</li>
+                                            <li>Buy tickets for the selected seats.</li>
+                                            <li>Buy merchandise or items available at the stadium store.</li>
+                                        </ul>
+                                        <p class="prj-desc">The application should allow administrators to :
+                                        </p>
+                                        <ul class="info-list">
+                                            <li>Customize and arrange the seating layout for different events.</li>
+                                            <li>Add new events, specifying details like date, type (match or concert), and additional information.</li>
+                                            <li>Mark and allocate available seats to attendees for each event.</li>
+                                            <li>Set pricing for different sections or types of seats within the stadium.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="card-container" id="AtlasDashboard">
+                        <div class="project-item">
+                            <div class="front-display">
+                                <div class="img_slider">
+                                    <div class="btn backward"><i class="fas fa-angle-double-left"></i></div>
+                                    <div class="btn forward"><i class="fas fa-angle-double-right"></i></div>
+                                    <div class="img_container"></div>
+                                    
+                                </div>
+                                <div class="prj-info">
+                                    <div class="container-main">
+                                        <h1 class="prj-title" lang="en">Vehicle Maintenance Survey Dashboard</h1>
+                                        <h1 class="prj-title" lang="fr">Tableau de bord de sondage sur l'entretien des véhicules</h1>
+                                        <div class="prj-type">
+                                            <div class="tri-item">Web</div>
+                                        </div>
+                                        <p class="prj-desc" lang="en">A dynamic dashboard visualizing survey data related to vehicle maintenance visits.</p>
+                                        <p class="prj-desc" lang="fr">Un tableau de bord dynamique visualisant les données d'enquête liées aux visites d'entretien des véhicules.</p>
+                                    </div>
+                                    <div class="container-extra">
+                                        <div class="prj-links">
+                                            <a href="https://github.com/Ayoub-Zerdoum/Dashboard-AtlasAuto" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" /></a>
+                                        </div>
+                                        
+                                        <div class="plus">
+                                            <span lang="en">See More</span>
+                                            <span lang="fr">Voir Plus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-display">
+                                <div class="icon-box">
+                                    <div class="return-icon">
+                                        <img src="./images/arrow-81-128.png" alt="arrow Back">
+                                    </div>
+                                </div>
+                                <div class="back-container">
+                                    <h1 class="prj-title" lang="en">Vehicle Maintenance Survey Dashboard</h1>
+                                    <h1 class="prj-title" lang="fr">Tableau de bord de sondage sur l'entretien des véhicules</h1>
+                                    <div class="prj-type">
+                                        <div class="tri-item">java</div>
+                                        <div class="tri-item">javafx</div>
+                                        <div class="tri-item">mysql</div>
+                                    </div>
+                                    <div class="desc-container" lang="en">
+                                        <p class="prj-desc">The application should allow users to :</p>
+                                        <ul class="info-list">
+                                            <li>Browse upcoming events and select the one they want to attend.</li>
+                                            <li>Top view of the stadium layout to help them make informed seat choices.</li>
+                                            <li>Select specific seats based on their preferences or requirements.</li>
+                                            <li>Buy tickets for the selected seats.</li>
+                                            <li>Buy merchandise or items available at the stadium store.</li>
+                                        </ul>
+                                        <p class="prj-desc">The application should allow administrators to :</p>
+                                        <ul class="info-list">
+                                            <li>Customize and arrange the seating layout for different events.</li>
+                                            <li>Add new events, specifying details like date, type (match or concert), and additional information.</li>
+                                            <li>Mark and allocate available seats to attendees for each event.</li>
+                                            <li>Set pricing for different sections or types of seats within the stadium.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="desc-container" lang="fr">
+                                        <p class="prj-desc">L'application devrait permettre aux utilisateurs de :</p>
+                                        <ul class="info-list">
+                                            <li>Consulter les événements à venir et sélectionner celui auquel ils souhaitent assister.</li>
+                                            <li>Voir la vue en plan du stade pour les aider à faire des choix éclairés en matière de sièges.</li>
+                                            <li>Sélectionner des places spécifiques en fonction de leurs préférences ou exigences.</li>
+                                            <li>Acheter des billets pour les places sélectionées.</li>
+                                            <li>Acheter des marchandises ou des articles disponibles dans le magasin du stade.</li>
+                                        </ul>
+                                        <p class="prj-desc">L'application devrait permettre aux administrateurs de :</p>
+                                        <ul class="info-list">
+                                            <li>Personnaliser et organiser la disposition des sièges pour différents événements.</li>
+                                            <li>Ajouter de nouveaux événements, en spécifiant des détails tels que la date, le type (match ou concert) et des informations supplémentaires.</li>
+                                            <li>Marquer et attribuer des sièges disponibles aux participants pour chaque événement.</li>
+                                            <li>Fixer les prix pour différentes sections ou types de sièges dans le stade.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+                    </div>
+                    <div class="card-container" id="MangaAnimeWebsite">
+                        <div class="project-item">
+                            <div class="front-display">
+                                <div class="img_slider">
+                                    <div class="btn backward"><i class="fas fa-angle-double-left"></i></div>
+                                    <div class="btn forward"><i class="fas fa-angle-double-right"></i></div>
+                                    <div class="img_container"></div>
+                                    
+                                </div>
+                                <div class="prj-info">
+                                    <div class="container-main">
+                                        <h1 class="prj-title" lang="en">Manga Anime and Light Novel Platform</h1>
+                                        <h1 class="prj-title" lang="fr">Plateforme Manga, Anime et Light Novel</h1>
+                                        <div class="prj-type">
+                                            <div class="tri-item">Web</div>
+                                        </div>
+                                        <p class="prj-desc" lang="en">This demo serves as a preview of a Manga Anime and Light Novel platform, designed to a front end project</p>
+                                        <p class="prj-desc" lang="fr">Cette démo sert de prévisualisation d'une plateforme Manga, Anime et Light Novel, conçue comme un projet front-end.</p>
+                                    </div>
+                                    <div class="container-extra">
+                                        <div class="prj-links">
+                                            <a href="https://github.com/Ayoub-Zerdoum/manga-anime-website" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" /></a>
+                                        </div>
+                                        
+                                        <div class="plus">
+                                            <span lang="en">See More</span>
+                                            <span lang="fr">Voir Plus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-display">
+                                <div class="icon-box">
+                                    <div class="return-icon">
+                                        <img src="./images/arrow-81-128.png" alt="arrow Back">
+                                    </div>
+                                </div>
+                                <div class="back-container">
+                                    <h1 class="prj-title" lang="en">Manga Anime and Light Novel Platform</h1>
+                                    <h1 class="prj-title" lang="fr">Plateforme Manga, Anime et Light Novel</h1>
+                                    <div class="prj-type">
+                                        <div class="tri-item">java</div>
+                                        <div class="tri-item">javafx</div>
+                                        <div class="tri-item">mysql</div>
+                                    </div>
+                                    <div class="desc-container">
+                                        <p class="prj-desc">The application should allow users to :
+                                        </p>
+                                        <ul class="info-list">
+                                            <li>Browse upcoming events and select the one they want to attend.</li>
+                                            <li>Top view of the stadium layout to help them make informed seat choices.</li>
+                                            <li>Select specific seats based on their preferences or requirements.</li>
+                                            <li>Buy tickets for the selected seats.</li>
+                                            <li>Buy merchandise or items available at the stadium store.</li>
+                                        </ul>
+                                        <p class="prj-desc">The application should allow administrators to :
+                                        </p>
+                                        <ul class="info-list">
+                                            <li>Customize and arrange the seating layout for different events.</li>
+                                            <li>Add new events, specifying details like date, type (match or concert), and additional information.</li>
+                                            <li>Mark and allocate available seats to attendees for each event.</li>
+                                            <li>Set pricing for different sections or types of seats within the stadium.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container" id="GestionGarage">
+                        <div class="project-item">
+                            <div class="front-display">
+                                <div class="img_slider">
+                                    <div class="btn backward"><i class="fas fa-angle-double-left"></i></div>
+                                    <div class="btn forward"><i class="fas fa-angle-double-right"></i></div>
+                                    <div class="img_container"></div>
+                                    
+                                </div>
+                                <div class="prj-info">
+                                    <div class="container-main">
+                                        <h1 class="prj-title" lang="en">Garage Management Program</h1>
+                                        <h1 class="prj-title" lang="fr">programme de gestion d'un garage</h1>
+                                        <div class="prj-type">
+                                            <div class="tri-item">Desktop</div>
+                                        </div>
+                                        <p class="prj-desc" lang="en">This is a minimized c++ programme that aims to gestion d'un garage</p>
+                                        <p class="prj-desc" lang="fr">Il s'agit d'un programme C++ minimaliste qui vise à la gestion d'un garage.</p>
+                                    </div>
+                                    <div class="container-extra">
+                                        <div class="prj-links">
+                                            <a href="https://github.com/Ayoub-Zerdoum/projet-C-gestion-hotel" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" /></a>
+                                        </div>
+                                        
+                                        <div class="plus">
+                                            <span lang="en">See More</span>
+                                            <span lang="fr">Voir Plus</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-display">
+                                <div class="icon-box">
+                                    <div class="return-icon">
+                                        <img src="./images/arrow-81-128.png" alt="arrow Back">
+                                    </div>
+                                </div>
+                                <div class="back-container">
+                                    <h1 class="prj-title" lang="en">Garage Management Program</h1>
+                                    <h1 class="prj-title" lang="fr">programme de gestion d'un garage</h1>
+                                    <div class="prj-type">
+                                        <div class="tri-item">java</div>
+                                        <div class="tri-item">javafx</div>
+                                        <div class="tri-item">mysql</div>
+                                    </div>
+                                    <div class="desc-container">
+                                        <p class="prj-desc">The application should allow users to :
+                                        </p>
+                                        <ul class="info-list">
+                                            <li>Browse upcoming events and select the one they want to attend.</li>
+                                            <li>Top view of the stadium layout to help them make informed seat choices.</li>
+                                            <li>Select specific seats based on their preferences or requirements.</li>
+                                            <li>Buy tickets for the selected seats.</li>
+                                            <li>Buy merchandise or items available at the stadium store.</li>
+                                        </ul>
+                                        <p class="prj-desc">The application should allow administrators to :
+                                        </p>
+                                        <ul class="info-list">
+                                            <li>Customize and arrange the seating layout for different events.</li>
+                                            <li>Add new events, specifying details like date, type (match or concert), and additional information.</li>
+                                            <li>Mark and allocate available seats to attendees for each event.</li>
+                                            <li>Set pricing for different sections or types of seats within the stadium.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Contact" class="contact-section section">
+            <h1 class="title" lang="en">Contact</h1>
+            <h1 class="title" lang="fr">Contact</h1>
+            <div class="contact-container">
+                <div class="left-side">
+                    <div class="contact-info-container">
+                        <h1 class="contact-title" lang="en">Get in touch</h1>
+                        <h1 class="contact-title" lang="fr">Contactez-moi</h1>
+                        <p class="contact-desc" lang="en">You can contact me with any questions, suggestions or just to say hi. I am always open to new ideas and collaborations.</p>
+                        <p class="contact-desc" lang="fr">Vous pouvez me contacter pour toutes questions, suggestions ou simplement dire bonjour. Je suis toujours ouvert aux nouvelles idées et collaborations.</p>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="97b885f9-dda4-413c-960b-48221b17ad06">
+                        <div class="name-email">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        <!-- hCaptcha Spam Protection -->
+                        <!--
+                        <div class="h-captcha" data-captcha="true"></div>
+                        -->
+                        <button type="submit" class="submit-form"><p>
+                            <span lang="en">SEND</span>
+                            <span lang="fr">ENVOYER</span>
+                        </p></button>
+                    </form>
+                </body>
+                </div>
+                <div class="right-side">
+                    <div class="nice-day">
+                        <span lang="en">Have a nice day</span>
+                        <span lang="fr">Passez une excellente journée</span>
+                    </div>
+                    <div class="contact-hex-container">
+                        <div class="hexagon row1 first">
+                            <a href="#" class="social-links"><img src="./images/social_11516211.png" alt="Gmail"></a>
+                        </div>
+                        <div class="hexagon row1">
+                            <a href="#" class="social-links"><img src="./images/github.png" alt="Github"></a>
+                        </div>
+                        <div class="hexagon row2">
+                            <a href="#" class="social-links"><img src="./images/linkedin_3536505.png" alt="LinkedIn"></a>
+                        </div>
+                        <div class="hexagon row2 gift" onclick="toggleHexContainer()">
+                            <img src="./images/boite-cadeau.png" alt="GIFT">
+                        </div>
+                        <div class="hexagon row2">
+                            <a href="#" class="social-links"><img src="./images/facebook_5968764.png" alt="Facebook"></a>
+                        </div>
+                        <div class="hexagon row3 first">
+                            <a href="#" class="social-links"><img src="./images/telephoner.png" alt="Github"></a>
+                        </div>
+                        <div class="hexagon row3">
+                            <a href="#" class="social-links"><img src="./images/messenger.png" alt="Messanger"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        
+    </main>
+    <footer>
+        
+    </footer>
+
+    <script src="./Scripts/init.js"></script>
+    <script src="./Scripts/toggleNavbar.js"></script>
+    <script src="./Scripts/ColorParam.js"></script>
+    <script src="./Scripts/toggleLang.js"></script>
+    <script src="./Scripts/gridAnimation.js"></script>
+    <script src="./Scripts/ToggleButtons.js"></script>
+    <script src="./Scripts/eduCareerFct.js"></script>
+    <script src="./Scripts/triSection.js"></script>
+    <script src="./Scripts/imgSlider.js"></script>
+    <script src="./Scripts/rotateCard.js"></script>
+    <script src="./Scripts/contactHexStyle.js"></script>
+</body>
+</html>
+
+

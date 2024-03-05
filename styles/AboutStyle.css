@@ -1,0 +1,435 @@
+@import url('variables.css');
+
+#About{
+    padding: 50px 20px;
+}
+
+.section .title{
+    margin: auto;
+    width: fit-content;
+    font-size: 4em;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    font-family: 'Anta', sans-serif;
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent 0% 20%,rgba(var(--darkened-color), 0.4));
+    line-height: 0.7em;
+
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        width: 43.3px;
+        height: 50px;
+        background-color: var(--main-color);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        clip-path: polygon(0% 25%, 50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%);
+    }
+
+    &:before {
+        left: -100px;
+    }
+
+    &:after {
+        right: -100px;
+    }
+}
+
+.section .desc{
+    text-align: center;
+    font-size: 1.7em; 
+    color: #666;
+    font-family: 'Farsan', Courier, monospace;
+    margin-top: 35px;
+}
+
+.about_container {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr 2fr;
+
+    gap: 20px;
+
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1500px;
+    margin-top: 40px;
+    counter-reset: sectionCounter;
+}
+
+.skill_section {
+    grid-column: span 2;
+}
+
+.box {
+    padding: 10px 20px;
+}
+
+.pers_info_section {
+    background-color: white; /* Light Red */
+}
+
+
+
+
+/*personnal info section*/
+.section_title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 32px;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+}
+
+.section_title::before {
+    content: counter(sectionCounter, decimal-leading-zero) ". ";
+    counter-increment: sectionCounter;
+    margin-right: 0.5em;
+}
+
+.title_line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--main-color); /* Use your desired color */
+    margin-left: 10px;
+    margin-top: 20px; /* Adjust the distance between the title and the line */
+    border: none;
+}
+
+
+.pers_info_section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 30px;
+    font-size: 18px;
+}
+
+.pers_info_list li {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 3px;
+}
+
+.pers_info_list li .info-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/*edu & career info section*/
+.career_edu_section .title_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    background-color: white;
+}
+
+.career_edu_section{
+    background-color: var(--main-color);
+    padding: 0;
+    position: relative;
+
+}
+
+
+
+.career_edu_section .title_box .section_title{
+    position: relative;
+}
+
+.career_edu_section .title_box .section_title_container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.career_edu_section .title_box .section_title_container::after {
+    content: '';
+    background: none;
+    display: block;
+    position: absolute;
+    z-index: 20;
+}
+
+.career_edu_section .title_box .career.section_title_container:not(.active)::after {
+    border-left: 30px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 69px solid white;
+    border-bottom: none;
+    left: -15px;
+    top: 0;
+}
+
+.career_edu_section .title_box .career.active.section_title_container::after {
+    border-left: 30px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 69px solid var(--main-color);
+    border-top: none;
+    left: -15px;
+    top: 0;
+}
+
+
+.career_edu_section .title_box .edu.active.section_title_container::after {
+    border-right: 30px solid transparent;
+    border-left: 0px solid transparent;
+    border-bottom: 69px solid var(--main-color);
+    border-top: none;
+    right: -15px;
+    top: 0;
+}
+
+.career_edu_section .title_box .edu.section_title_container:not(.active)::after {
+    border-right: 30px solid transparent;
+    border-left: 0px solid transparent;
+    border-top: 69px solid white;
+    border-bottom: none;
+    right: -15px;
+    top: 0;
+}
+
+.career_edu_section .title_box .section_title_container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.career_edu_section .title_box .career.section_title_container {
+    background-color:  white;
+}
+
+.career_edu_section .title_box .edu.section_title_container {
+    background-color:  white;
+}
+
+.career_edu_section .title_box .career.active.section_title_container {
+    background-color:  var(--main-color);
+}
+
+.career_edu_section .title_box .edu.active.section_title_container {
+    background-color:  var(--main-color);
+    z-index: 10;
+}
+
+.career_edu_section .active .section_title{
+    color: white;
+}
+
+/*education and career main part*/
+.edu_career_container {
+    display: flex;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.list-container {
+    width: 25%;
+    height: 100%;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.list::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+  
+.list::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--darkened-color), 0.4); /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border radius of the thumb */
+}
+
+
+
+.list li {
+    cursor: pointer;
+    padding: 10px;
+    border-left: 2px solid #ccc;
+    color: #ccc;
+    font-size: 20px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: var(--main-color);
+}
+
+.list li:hover {
+    background-color: rgba(var(--darkened-color), 0.7);
+}
+
+.list li.active {
+    color: gold;
+    border-left: 4px solid gold;
+    font-weight: bold;
+    padding-left: 30px;
+    position: relative;
+    background-color: rgba(var(--darkened-color), 0.8);
+    margin-left: -1px;
+
+    &::before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 12px solid gold; /* Adjust the size as needed */
+        border-bottom: 8px solid transparent; /* Set the color as needed */
+        border-top: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        margin-right: 10px; /* Adjust the margin as needed */
+    }
+}
+
+.list li span{
+    font-size: small;
+    color: gold;
+    font-family: "Kode Mono", monospace;
+}
+
+.info-container {
+    flex: 1;
+    padding: 20px 10px 20px 30px;
+    color: #ccc;
+    font-family: Montserrat, monospace;
+}
+
+.info-container h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-family: fredoka, Arial, Helvetica, sans-serif;
+}
+
+.info-container h3 span {
+    color: gold;
+    font-weight: 600;
+}
+
+.info-container .date {
+    font-family: "Kode Mono", monospace;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.info-container .info-list li{
+    font-family: Rubik, sans-serif;
+    font-size: 18px;
+    margin: 5px 0px;
+    position: relative;
+    list-style: none;
+
+    &::before {
+        content: '';
+        width: 12px;
+        height: 13.9px;
+        background-color: white;
+        position: absolute;
+        top: 11px;
+        left: -20px;
+        transform: translateY(-50%);
+        clip-path: polygon(0% 25%, 50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%);
+    }
+}
+
+.info-container .info-list{
+    margin-bottom: 10px;
+}
+
+.info-container .info-list h4{
+    font-size: 30px;
+    font-weight: 600;
+    color: gold;
+}
+
+.edu-info,.career-info {
+    display: none;
+}
+
+.edu-info p span{
+    color: gold;
+    font-size: larger;
+    font-family: fredoka;
+}
+
+.edu-info.active ,.career-info.active{
+    display: block;
+}
+
+
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1300px) {
+    .about_container {
+        grid-template-rows: repeat(1, auto);
+        grid-template-columns: 2fr 3fr; /* Single column for smaller screens */
+    }
+
+    .skill_section {
+        grid-column: span 2;
+    }
+
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1100px) {
+    .about_container {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .skill_section {
+        grid-column: span 1;
+    }
+
+    .pers_info_list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .pers_info_list li {
+        width: 50%; /* Set the width to 50% for two columns */
+        box-sizing: border-box;
+    } 
+}
+
+@media (max-width: 768px) {
+    .pers_info_list li {
+        width: 100%; /* On smaller screens, make it a single column */
+    }
+
+    .career_edu_section .title_box .section_title{
+        font-size: 28px;
+    }
+
+    .career_edu_section .title_box .career.section_title_container:not(.active)::after {
+        border-top: 64px solid white;
+    }
+    
+    .career_edu_section .title_box .career.active.section_title_container::after {
+        border-bottom: 64px solid var(--main-color);
+    }
+    
+    
+    .career_edu_section .title_box .edu.active.section_title_container::after {
+        border-bottom: 64px solid var(--main-color);
+    }
+    
+    .career_edu_section .title_box .edu.section_title_container:not(.active)::after {
+        border-top: 64px solid white;
+    }
+}
