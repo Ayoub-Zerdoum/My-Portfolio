@@ -15,9 +15,13 @@ function toggleSection(section) {
     clickedContainer.classList.add('active');
 
     if (section === 'edu') {
+        /*
         eduList.style.display = 'block';
         careerList.style.display = 'none';
+        */
 
+        eduList.classList.add("active");
+        careerList.classList.remove("active");
         careerInfoSections.forEach(section => section.classList.remove('active'));
 
         // Activate the first edu list item
@@ -32,9 +36,12 @@ function toggleSection(section) {
             firstEduInfoSection.classList.add('active');
         }
     } else if (section === 'career') {
+        /*
         eduList.style.display = 'none';
         careerList.style.display = 'block';
-
+        */
+        eduList.classList.remove("active");
+        careerList.classList.add("active");
         eduInfoSections.forEach(section => section.classList.remove('active'));
 
 

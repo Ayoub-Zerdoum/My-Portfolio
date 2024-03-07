@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Ayoub-Zerdoum</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -48,21 +48,8 @@
             <div class="colors" id="settings-icon"><i class="fas fa-cog"></i></div>
             <div class="hamburger-icon"><i class="fas fa-bars"></i></div>
         </div>
-        
-    </nav>
-    <!-- Mobile menu container -->
-    <div class="mobile-menu light-navbar">
-        <a href="#Home" class="choice" lang="en">Home</a>
-        <a href="#About" class="choice" lang="en">About</a>
-        <a href="#Projects" class="choice" lang="en">Projects</a>
-        <a href="#Contact" class="choice" lang="en">Contact</a>
-        <a href="#Home" class="choice" lang="fr">Accueil</a>
-        <a href="#About" class="choice" lang="fr">À propos</a>
-        <a href="#Projects"class="choice" lang="fr">Projets</a>
-        <a href="#Contact" class="choice" lang="fr">Contact</a>
-    </div>
 
-    <!-- Color choice menu -->
+        <!-- Color choice menu -->
     <div class="options" id="options">
         <div class="color-options" id="color-options">
             <p lang="fr" class="color_option_text">Couleur du thème</p>
@@ -89,7 +76,48 @@
             </div>
         </div>
     </div>
-    
+        
+    </nav>
+    <!-- Mobile menu container -->
+    <div class="mobile-menu light-navbar">
+        <a href="#Home" class="choice" lang="en">Home</a>
+        <a href="#About" class="choice" lang="en">About</a>
+        <a href="#Projects" class="choice" lang="en">Projects</a>
+        <a href="#Contact" class="choice" lang="en">Contact</a>
+        <a href="#Home" class="choice" lang="fr">Accueil</a>
+        <a href="#About" class="choice" lang="fr">À propos</a>
+        <a href="#Projects"class="choice" lang="fr">Projets</a>
+        <a href="#Contact" class="choice" lang="fr">Contact</a>
+    </div>
+
+    <!-- Color choice menu 
+    <div class="options" id="options">
+        <div class="color-options" id="color-options">
+            <p lang="fr" class="color_option_text">Couleur du thème</p>
+            <p lang="en" class="color_option_text">Theme color</p>
+            <div class="color-picker">
+                <div class="color-option" data-color="#3c2c99"></div>
+                <div class="color-option" data-color="#000080"></div>
+
+
+                
+                <div class="color-option" data-color="#1854b4"></div>
+                <div class="color-option" data-color="#008000"></div>
+                
+                <div class="color-option" data-color="#B22222"></div>
+            </div>
+        </div>
+        <div class="lang-options">
+            <p class="lang_option_text">Language</p>
+            <div id="language-switcher" class="toggle-switch">
+                <label class="text">eng</label>
+                <input type="checkbox" id="language-toggle" onchange="toggleLanguage()">
+                <label for="language-toggle" class="toggle-button"></label>
+                <label class="text">fr</label>
+            </div>
+        </div>
+    </div>
+    -->
 
     <main>
         <div id="Home" class="Home_Container">
@@ -178,12 +206,12 @@
                         </div>
                         <div class="edu_career_container">
                             <div class="list-container">
-                                <ul class="edu-list list">
+                                <ul class="edu-list list active">
                                     <li data-id="edu-entry-1" class="active">LPN</li>
                                     <li data-id="edu-entry-2">IPEIN</li>
                                     <li data-id="edu-entry-3">ENICAR</li>
                                 </ul>
-                                <ul class="career-list list" style="display: none;">
+                                <ul class="career-list list">
                                     <li data-id="career-entry-1">ATLAS AUTO <span lang="fr">(Stage)</span><span lang="en">(Internship)</span></li>
                                 </ul>
                             </div>

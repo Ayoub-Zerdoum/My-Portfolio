@@ -441,17 +441,49 @@
 
 
 @media (max-width: 400px) {
-    .left-side {
-        margin: 0px 10px;
+    #Home{
+        height: fit-content;
     }
 
-    .left-side .name{
-        font-size: 30px;
-        text-align: right;
+    .Home_Container .left-side{
+        min-width: 300px !important;
     }
 
+    
 
-    .left-side h2{
+    .left-side  .welcomeName {
+        color: red; /* White text for dark backgrounds */
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+        
+    .left-side  h2 {
         font-size: 20px;
+        display: none;
     }
+        
+    .left-side p {
+        color: #ccc; /* Light gray text for dark backgrounds */
+        font-size: 1.2em;
+        line-height: 1.5;
+        max-width: 850px;
+        text-indent: 10px;
+        text-align: justify;
+    }
+        
+        /* Additional styling for spans with specific classes */
+        .welcome {
+        color: white; /* Gold color */
+        white-space: nowrap;
+        }
+        
+        .name {
+        color: gold; /* Cyan color */
+        font-family: Condiment;
+        letter-spacing: 5px;
+        white-space: nowrap;
+        font-size: 30px;
+        margin-left: 10px;
+        width: 100%;
+        }
 }

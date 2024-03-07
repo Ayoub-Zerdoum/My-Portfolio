@@ -242,6 +242,14 @@
     margin-top: 10px;
 }
 
+.list:not(.active){
+    display: none;
+}
+
+.list.active{
+    display: block;
+}
+
 .list::-webkit-scrollbar {
     width: 5px; /* Set the width of the scrollbar */
 }
@@ -434,4 +442,104 @@
     }
 }
 
+@media (max-width: 400px){
+    #About{
+        padding: 50px 5px;
+    }
 
+    .section .title{
+        &:before {
+            left: -70px;
+        }
+    
+        &:after {
+            right: -70px;
+        }
+    }
+
+    .pers_info_section ul {
+        margin: 10px 10px;
+        font-size: 16px;
+    }
+
+    .pers_info_section .title_line{
+        display: none;
+    }
+    
+    .pers_info_section.box{
+        padding: 10px 0px;
+    }
+
+    .edu_career_container{
+        flex-direction: column;
+    }
+
+    .edu_career_container .list.active{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+
+    .list li{
+        padding-left: 30px;
+        border-bottom: 2px solid #ccc;
+        border-left: none;
+    }
+
+    .list li.active {
+        border-left: none;
+        border-bottom: 4px solid gold;
+        padding-left: 30px;
+        position: relative;
+        background-color: rgba(var(--darkened-color), 0.8);
+        margin-left: -1px;
+    }
+
+    .info-container .info-list li{
+        text-indent: 20px;
+        text-align: justify;
+
+        &::before {
+            top: 11px;
+            left: 0px;
+        }
+    }
+
+    .info-container{
+        width: 90vw;
+        padding: 0px;
+    }
+    .edu-info,.career-info {
+        width: 100%;
+    }
+
+    .career_edu_section{
+        width: 98vw;
+    }
+
+    .career_edu_section .title_box .section_title{
+        font-size: 24px;
+    }
+
+    .career_edu_section .title_box{
+        width: 100%;
+    }
+
+    .career_edu_section .title_box .career.section_title_container:not(.active)::after {
+        border-top: 59px solid white;
+    }
+    
+    .career_edu_section .title_box .career.active.section_title_container::after {
+        border-bottom: 59px solid var(--main-color);
+    }
+    
+    
+    .career_edu_section .title_box .edu.active.section_title_container::after {
+        border-bottom: 59px solid var(--main-color);
+    }
+    
+    .career_edu_section .title_box .edu.section_title_container:not(.active)::after {
+        border-top: 59px solid white;
+    }
+}
