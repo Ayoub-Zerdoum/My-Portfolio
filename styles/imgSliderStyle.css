@@ -89,3 +89,9 @@
     transform: translateX(0);
     }
 }
+
+@media (max-width: 400px){
+    .img_slider{
+        height: 30%; /*230px*/
+    }
+}

@@ -542,4 +542,8 @@
     .career_edu_section .title_box .edu.section_title_container:not(.active)::after {
         border-top: 59px solid white;
     }
+
+    .skill_section{
+        width: 100vw;
+    }
 }
