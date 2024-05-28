@@ -16,6 +16,7 @@
     line-height: 0.7em;
 
     position: relative;
+    -webkit-box
 
     &:before,
     &:after {
