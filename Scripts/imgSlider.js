@@ -194,7 +194,14 @@ function initializeSlider2(imageArray, sliderContainer) {
 
 
 
-
+let projectSpringbootGestionStageImages = [
+    "./images/project captures/Gestion stage Spring/login.png",
+    "./images/project captures/Gestion stage Spring/admin interface.png",
+    "./images/project captures/Gestion stage Spring/adding notif.png",
+    "./images/project captures/Gestion stage Spring/filter.png",
+    "./images/project captures/Gestion stage Spring/interface student.png",
+    "./images/project captures/Gestion stage Spring/contact info.png"
+];
 
 
 let projectStadeImages = [
@@ -234,6 +241,8 @@ let projectGestionGarageImages = [
     "./images/project captures/projet gestionGarage/menuFacture0.png"
 ];
 
+const project_SpringbootStage_SliderContainer = document.querySelector('#SpringBootStage .img_slider');
+initializeSlider2(projectSpringbootGestionStageImages, project_SpringbootStage_SliderContainer);
 
 const projectStadeSliderContainer = document.querySelector('#projetStade .img_slider');
 initializeSlider2(projectStadeImages, projectStadeSliderContainer);
