@@ -368,4 +368,8 @@ textarea {
         margin-top: 80px;
         margin-bottom: 0px;
     }
+
+    .contact-hex-container{
+        transform: translate(-8%);
+    }
 }
