@@ -204,6 +204,10 @@
     text-align: center;
     font-family: 'Fredoka', sans-serif;
     margin: 0 5px;
+
+    overflow: hidden;
+    max-height: calc(3 * 1.2em); /* 3 lines of text with a line-height of 1.2 */
+    line-height: 1.2;
 }
 
 .prj-info .prj-type .tri-item{
@@ -218,6 +222,10 @@
     text-indent: 10px;
     text-align: justify;
     margin: 10px 5px;
+
+    overflow: hidden;
+    max-height: calc(5 * 1.2em); /* 5 lines of text with a line-height of 1.2 */
+    line-height: 1.2;
 }
 
 .prj-info .prj-links{
