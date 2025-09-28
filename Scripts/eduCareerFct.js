@@ -5,14 +5,19 @@ const careerInfoSections = document.querySelectorAll('.career-info');
 
 
 eduList.addEventListener('click', function (event) {
-    const targetEntryId = event.target.getAttribute('data-id');
+    // Find the closest li to the clicked element
+    const li = event.target.closest('li');
+    if (!li) return; 
+
+    const targetEntryId = li.getAttribute('data-id');
+    //const targetEntryId = event.target.getAttribute('data-id');
 
     // Remove 'active' class from all li elements
     const eduListItems = document.querySelectorAll('.edu-list li');
     eduListItems.forEach(item => item.classList.remove('active'));
 
     // Add 'active' class to the clicked li element
-    event.target.classList.add('active');
+    li.classList.add('active');
 
     // Hide all info sections
     eduInfoSections.forEach(section => section.classList.remove('active'));
@@ -27,14 +32,19 @@ eduList.addEventListener('click', function (event) {
 });
 
 careerList.addEventListener('click', function (event) {
-    const targetEntryId = event.target.getAttribute('data-id');
+
+    const li = event.target.closest('li');
+    if (!li) return; 
+
+    const targetEntryId = li.getAttribute('data-id');
+
 
     // Remove 'active' class from all li elements
     const careerListItems = document.querySelectorAll('.career-list li');
     careerListItems.forEach(item => item.classList.remove('active'));
 
     // Add 'active' class to the clicked li element
-    event.target.classList.add('active');
+    li.classList.add('active');
 
     // Hide all info sections
     careerInfoSections.forEach(section => section.classList.remove('active'));

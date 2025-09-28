@@ -1,15 +1,19 @@
 /*a slider that only works manually*/ 
-function initializeSlider(imageArray, sliderContainer) {
+function initializeSlider(imageArray, sliderContainer, startIndex = 0) {
     const slider = sliderContainer;
     let imgContainer = sliderContainer.querySelector('.img_container');
     const btn_forward = sliderContainer.querySelector('.forward');
     const btn_backward = sliderContainer.querySelector('.backward');
 
-    let indexImg = 0;
+    let indexImg = startIndex;
+    sliderContainer._images = imageArray;
+    sliderContainer._indexImg = indexImg;
 
     // Initialize the first image
     const img = document.createElement('img');
     img.src = imageArray[indexImg];
+    img.dataset.srcOriginal = imageArray[indexImg]; //
+    img.classList.add('slider-img');
     imgContainer.appendChild(img);
 
     btn_forward.addEventListener('click', () => {
@@ -28,9 +32,14 @@ function initializeSlider(imageArray, sliderContainer) {
         let nextImgContainer = document.createElement('div');
         nextImgContainer.classList.add('img_container', 'next');
         const nextImg = document.createElement('img');
-        nextImg.src = imageArray[indexImg];
+        nextImg.classList.add('slider-img'); // <--- add this
+        //nextImg.src = imageArray[indexImg];
+        slider._indexImg = (slider._indexImg + 1) % slider._images.length;
+        nextImg.src = slider._images[slider._indexImg];
         nextImgContainer.appendChild(nextImg);
+
         slider.appendChild(nextImgContainer);
+
 
         // Apply the slide-left animation to both containers
         imgContainer.classList.add('previous');
@@ -63,6 +72,8 @@ function initializeSlider(imageArray, sliderContainer) {
         const previousImgContainer = document.createElement('div');
         previousImgContainer.classList.add('img_container', 'previous');
         const previousImg = document.createElement('img');
+        previousImg.classList.add('slider-img'); // <--- add this
+
         previousImg.src = imageArray[indexImg];
         previousImgContainer.appendChild(previousImg);
         slider.appendChild(previousImgContainer);
@@ -95,7 +106,11 @@ function initializeSlider2(imageArray, sliderContainer) {
     // Initialize the first image
     const img = document.createElement('img');
     img.src = imageArray[indexImg];
-    imgContainer.appendChild(img);
+    img.dataset.srcOriginal = imageArray[indexImg]; //
+    img.classList.add('slider-img'); //
+    imgContainer.appendChild(img); 
+
+    sliderContainer._images = imageArray;
 
     // Function to handle next slide
     function nextSlide() {
@@ -115,6 +130,8 @@ function initializeSlider2(imageArray, sliderContainer) {
         nextImgContainer.classList.add('img_container', 'next');
         const nextImg = document.createElement('img');
         nextImg.src = imageArray[indexImg];
+        // In forward/backward click handlers:
+        nextImg.classList.add('slider-img'); // <-- important
         nextImgContainer.appendChild(nextImg);
         slider.appendChild(nextImgContainer);
 
@@ -151,6 +168,7 @@ function initializeSlider2(imageArray, sliderContainer) {
         previousImgContainer.classList.add('img_container', 'previous');
         const previousImg = document.createElement('img');
         previousImg.src = imageArray[indexImg];
+        previousImg.classList.add('slider-img'); // <-- important
         previousImgContainer.appendChild(previousImg);
         slider.appendChild(previousImgContainer);
 
@@ -190,6 +208,88 @@ function initializeSlider2(imageArray, sliderContainer) {
     // Start auto slide initially
     startAutoSlide();
 }
+
+
+/************ fullscreen functions ********** */
+const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+const fullscreenSlider = document.getElementById('fullscreenSlider');
+const fullscreenClose = document.getElementById('fullscreenClose');
+
+// Open fullscreen with images
+function openFullscreen(images, startIndex = 0) {
+    console.log("opening fullscreen")
+
+  // Show overlay
+  fullscreenOverlay.style.display = 'flex';
+  console.log(fullscreenSlider._images)
+
+  // Clear old images and state
+    const imgContainer = fullscreenSlider.querySelector('.img_container');
+    if (imgContainer) imgContainer.innerHTML = '';
+    fullscreenSlider._images = images;   // store current images
+    fullscreenSlider._indexImg = startIndex; // current indexImg
+
+
+
+  // attach close handler now (remove previous to avoid duplicates)
+  const closeBtn = document.getElementById('fullscreenClose');
+  if (closeBtn) {
+    closeBtn.removeEventListener('click', closeFullscreen); // safe even if not attached
+    closeBtn.addEventListener('click', closeFullscreen);
+  }
+
+  if(!fullscreenSlider) console.log("no fullscreen container found !")
+  // Reuse your existing initializer
+  initializeSlider(images, fullscreenSlider, startIndex);
+
+  // optional: click outside slider closes overlay (attach once)
+  if (!fullscreenOverlay._outsideHandlerAttached) {
+    fullscreenOverlay.addEventListener('click', (e) => {
+      if (e.target === fullscreenOverlay) closeFullscreen();
+    });
+    fullscreenOverlay._outsideHandlerAttached = true;
+  }
+
+}
+
+
+// named close function so removeEventListener works reliably
+function closeFullscreen() {
+  if (!fullscreenOverlay) return;
+  // clear slider content so re-init is clean next time
+  const imgContainer = fullscreenSlider && fullscreenSlider.querySelector('.img_container');
+  if (imgContainer) imgContainer.innerHTML = '';
+  // Remove _images reference
+  fullscreenSlider._images = null;
+  console.log(fullscreenSlider._images)
+  fullscreenOverlay.style.display = 'none';
+}
+
+// Handle clicks on any slider image (outside fullscreen)
+document.addEventListener('click', function (e) {
+    console.log("clicking on an img")
+  const clickedImg = e.target.closest('img.slider-img');
+  if (!clickedImg) console.log("clicking img not found");
+  if (!clickedImg) return;
+  console.log("clicking img found")
+
+  // Ignore clicks inside fullscreen
+  if (clickedImg.closest('#fullscreenOverlay')) return;
+  console.log("clicking outside")
+
+  const slider = clickedImg.closest('.img_slider');
+  if( !slider) console.log("slider not found")
+  if( !slider._images) console.log("slider images not found")
+  if (!slider || !slider._images) return;
+  console.log("slider or sliders images found")
+
+  const images = slider._images;
+  const originalSrc = clickedImg.dataset.srcOriginal || clickedImg.src;
+  let startIndex = images.indexOf(originalSrc);
+  if (startIndex === -1) startIndex = 0;
+
+  openFullscreen(images, startIndex);
+});
 
 
 

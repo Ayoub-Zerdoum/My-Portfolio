@@ -24,16 +24,20 @@ function toggleSection(section) {
         careerList.classList.remove("active");
         careerInfoSections.forEach(section => section.classList.remove('active'));
 
+        //remove active from all items
+        const EduListItems = document.querySelectorAll('.edu-list li');
+        EduListItems.forEach(item => item.classList.remove('active'));
         // Activate the first edu list item
-        const firstEduListItem = document.querySelector('.edu-list li');
-        if (firstEduListItem) {
-            firstEduListItem.classList.add('active');
+        //const firstEduListItem = document.querySelector('.edu-list li');
+        if (EduListItems[0]) {
+            EduListItems[0].classList.add('active');
         }
 
         // Show the corresponding info section
-        const firstEduInfoSection = document.querySelector('.edu-info');
-        if (firstEduInfoSection) {
-            firstEduInfoSection.classList.add('active');
+        const EduInfoSection = document.querySelectorAll('.edu-info');
+        EduInfoSection.forEach(section => section.classList.remove('active'));
+        if (EduInfoSection[0]) {
+            EduInfoSection[0].classList.add('active');
         }
     } else if (section === 'career') {
         /*
@@ -46,15 +50,17 @@ function toggleSection(section) {
 
 
         // Activate the first career list item
-        const firstCareerListItem = document.querySelector('.career-list li');
-        if (firstCareerListItem) {
-            firstCareerListItem.classList.add('active');
+        const CareerListItem = document.querySelectorAll('.career-list li');
+        CareerListItem.forEach(item => item.classList.remove('active'));
+        if (CareerListItem[0]) {
+            CareerListItem[0].classList.add('active');
         }
 
         // Show the corresponding info section
-        const firstCareerInfoSection = document.querySelector('.career-info');
-        if (firstCareerInfoSection) {
-            firstCareerInfoSection.classList.add('active');
+        const CareerInfoSection = document.querySelectorAll('.career-info');
+        CareerInfoSection.forEach(section => section.classList.remove('active'));
+        if (CareerInfoSection[0]) {
+            CareerInfoSection[0].classList.add('active');
         }
     }
 }

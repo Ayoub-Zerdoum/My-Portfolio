@@ -95,3 +95,92 @@
         height: 30%; /*230px*/
     }
 }
+
+
+/********** fullscreen container *******/
+/* Fullscreen overlay container */
+#fullscreenOverlay {
+    display: none; /* hidden by default */
+    position: fixed; /* stay fixed on the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* full width */
+    height: 100vh; /* full height */
+    background: rgba(0, 0, 0, 0.85); /* semi-transparent dark overlay */
+    z-index: 9999; /* above everything else */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    overflow: hidden; /* prevent scroll */
+}
+
+/* Slider inside overlay */
+#fullscreenSlider {
+    max-width: 90vw; /* leave some margin */
+    max-height: 90vh;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image container */
+#fullscreenSlider .img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Slider images */
+#fullscreenSlider .img_container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* maintain aspect ratio */
+    border-radius: 8px;
+}
+
+/* Navigation buttons */
+#fullscreenSlider .close {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    user-select: none;
+    z-index: 100;
+}
+
+#fullscreenSlider .forward {
+    color: black;
+}
+
+#fullscreenSlider .backward {
+    color: black;
+}
+
+/* Close button */
+#fullscreenClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}

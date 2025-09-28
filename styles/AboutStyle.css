@@ -234,6 +234,17 @@
     height: 100%;
 }
 
+.edu-list li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edu-list li:not(.active) span{
+    font-weight: normal;
+    color: white !important;
+}
+
 .list {
     list-style: none;
     padding: 0;
