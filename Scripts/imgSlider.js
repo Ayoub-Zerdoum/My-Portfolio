@@ -341,6 +341,42 @@ let projectGestionGarageImages = [
     "./images/project captures/projet gestionGarage/menuFacture0.png"
 ];
 
+let projectTestiniImages = [
+    "./images/project captures/testini project/template galerry.png",
+    "./images/project captures/testini project/quiz example.png",
+    "./images/project captures/testini project/your challenges display A.png",
+    "./images/project captures/testini project/your challenges display B.png",
+    "./images/project captures/testini project/your challenges display C.png",
+    "./images/project captures/testini project/classroom.png",
+    "./images/project captures/testini project/classroom example.png",
+    "./images/project captures/testini project/assignments.png",
+    "./images/project captures/testini project/challenge creator pt1.png",
+    "./images/project captures/testini project/challenge creator pt2.png",
+    "./images/project captures/testini project/challenge view.png"
+];
+
+let projectODAImages = [
+    "./images/project captures/Operational Day Analyzer/file upload interface.png",
+    "./images/project captures/Operational Day Analyzer/XML file upload.png",
+    "./images/project captures/Operational Day Analyzer/Data View - version table.png",
+    "./images/project captures/Operational Day Analyzer/Data View Calender display.png",
+    "./images/project captures/Operational Day Analyzer/Version View - Event level.png",
+    "./images/project captures/Operational Day Analyzer/Version View - tree view.png",
+    "./images/project captures/Operational Day Analyzer/Version View - clock view - event display .png",
+    "./images/project captures/Operational Day Analyzer/Data view - content Search interface.png",
+    "./images/project captures/Operational Day Analyzer/version comparison tree display example.png",
+    "./images/project captures/Operational Day Analyzer/data correction - selecting changes.png",
+    "./images/project captures/Operational Day Analyzer/Correction report - ordered delete scripts.png",
+    "./images/project captures/Operational Day Analyzer/User created successfully.png",
+    "./images/project captures/Operational Day Analyzer/eset code is empty.png"
+];
+
+let projectSpaceShooterImages = [
+    "./images/project captures/Space Shooter/space shooter start.png",
+    "./images/project captures/Space Shooter/space shooter pt1.png",
+    "./images/project captures/Space Shooter/space shooter pt2.png",
+    "./images/project captures/Space Shooter/space shooter pt3.png"
+];
 const project_SpringbootStage_SliderContainer = document.querySelector('#SpringBootStage .img_slider');
 initializeSlider2(projectSpringbootGestionStageImages, project_SpringbootStage_SliderContainer);
 
@@ -355,3 +391,12 @@ initializeSlider2(projectMangaAnimeImages, projectMangaAnimeSliderContainer);
 
 const projectGestionGarageSliderContainer = document.querySelector('#GestionGarage .img_slider');
 initializeSlider2(projectGestionGarageImages, projectGestionGarageSliderContainer);
+
+const projectTestiniSliderContainer = document.querySelector('#projectTestini .img_slider');
+initializeSlider2(projectTestiniImages, projectTestiniSliderContainer);
+
+const projectODASliderContainer = document.querySelector('#OperationalDayAalyzer .img_slider');
+initializeSlider2(projectODAImages, projectODASliderContainer);
+
+const projectSpaceShooterSliderContainer = document.querySelector('#SpaceShooter .img_slider');
+initializeSlider2(projectSpaceShooterImages, projectSpaceShooterSliderContainer);
